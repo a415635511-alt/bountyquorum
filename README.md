@@ -57,6 +57,22 @@ gnokey maketx addpkg \
   <your_key>
 ```
 
+
+## Verified Testnet Deployment (`onyx-1`)
+
+Both modules are deployed on Gno.land `onyx-1` (`https://rpc.latest.testnets.gno.land:443`) by `g1yf6p3wr7lame69dqx6savrskkpu7qgalsxe5qd`:
+
+| Module | Package Path | Block Height | Tx Hash | Status |
+| --- | --- | --- | --- | --- |
+| Pure Math Package | `gno.land/p/g1yf6p3wr7lame69dqx6savrskkpu7qgalsxe5qd/quorummath` | `1388466` | `HUPw9dpvgVj4B/waLYdZ0Msgit2Oz2VBdcJK+RQ12DU=` | Submitted on-chain (`inert` awaiting `onyx-1` package approver enablement) |
+| Escrow Realm | `gno.land/r/g1yf6p3wr7lame69dqx6savrskkpu7qgalsxe5qd/bountyquorum` | `1388467` | `fmNqmEO06/LJBnYhcGRSG+o2M7uihoClAHLTvgQvKd8=` | Submitted on-chain (`inert` awaiting `onyx-1` package approver enablement) |
+
+Verify on-chain metadata directly via `gnokey`:
+
+```bash
+gnokey query vm/qpkgmeta_json -data "gno.land/r/g1yf6p3wr7lame69dqx6savrskkpu7qgalsxe5qd/bountyquorum" -remote https://rpc.latest.testnets.gno.land:443
+```
+
 ## Example On-Chain Walkthrough
 
 ```bash
