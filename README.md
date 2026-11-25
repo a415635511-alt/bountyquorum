@@ -64,13 +64,24 @@ Both modules are deployed on Gno.land `onyx-1` (`https://rpc.latest.testnets.gno
 
 | Module | Package Path | Block Height | Tx Hash | Status |
 | --- | --- | --- | --- | --- |
-| Pure Math Package | `gno.land/p/g1yf6p3wr7lame69dqx6savrskkpu7qgalsxe5qd/quorummath` | `1388466` | `HUPw9dpvgVj4B/waLYdZ0Msgit2Oz2VBdcJK+RQ12DU=` | Submitted on-chain (`inert` awaiting `onyx-1` package approver enablement) |
-| Escrow Realm | `gno.land/r/g1yf6p3wr7lame69dqx6savrskkpu7qgalsxe5qd/bountyquorum` | `1388467` | `fmNqmEO06/LJBnYhcGRSG+o2M7uihoClAHLTvgQvKd8=` | Submitted on-chain (`inert` awaiting `onyx-1` package approver enablement) |
+| Pure Math Package | `gno.land/p/g1yf6p3wr7lame69dqx6savrskkpu7qgalsxe5qd/quorummath` | `1388466` | `HUPw9dpvgVj4B/waLYdZ0Msgit2Oz2VBdcJK+RQ12DU=` | `live` (verified via `vm/qpkgmeta_json`) |
+| Escrow Realm | `gno.land/r/g1yf6p3wr7lame69dqx6savrskkpu7qgalsxe5qd/bountyquorum` | `1388467` | `fmNqmEO06/LJBnYhcGRSG+o2M7uihoClAHLTvgQvKd8=` | `live` (verified via `vm/qpkgmeta_json`) |
 
 Verify on-chain metadata directly via `gnokey`:
 
 ```bash
 gnokey query vm/qpkgmeta_json -data "gno.land/r/g1yf6p3wr7lame69dqx6savrskkpu7qgalsxe5qd/bountyquorum" -remote https://rpc.latest.testnets.gno.land:443
+```
+
+## Verified `CreateQuest` on `onyx-1`
+
+Quest **#1**, **Genesis Ecosystem Indexer Bounty (Testnet Demo)**, was created on-chain at block **1398381** with **1,000,000 `ugnot`** in testnet escrow and a **1-of-1** reviewer quorum. The RPC receipt records `QuestCreated`; an independent `vm/qrender` query confirmed the quest is `OPEN`. No milestones or payouts were executed in this demo.
+
+- **Transaction:** [`rx2SaHgVoyRPB5u6kIjbLUnQXzxaOh+QhPWBzhLIvXk=`](https://rpc.latest.testnets.gno.land:443/tx?hash=0xAF1D92687815A3244F079BBA9088DB2D49D05F3C5A3A1F9084F581CE12C8BD79)
+- **Quest readback:**
+
+```bash
+gnokey query vm/qrender -data "gno.land/r/g1yf6p3wr7lame69dqx6savrskkpu7qgalsxe5qd/bountyquorum:quest/1" -remote https://rpc.latest.testnets.gno.land:443
 ```
 
 ## Example On-Chain Walkthrough
