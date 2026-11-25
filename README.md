@@ -104,3 +104,21 @@ gnokey maketx call -pkgpath "gno.land/r/g1yf6p3wr7lame69dqx6savrskkpu7qgalsxe5qd
 ## License
 
 MIT
+
+
+### Verified End-to-End On-Chain Lifecycle (Quest #1 — 100% Zero-Dust Payout)
+
+- **Live Board URL**: `https://onyx.testnets.gno.land/r/g1yf6p3wr7lame69dqx6savrskkpu7qgalsxe5qd/bountyquorum`
+- **Live Quest #1 URL**: `https://onyx.testnets.gno.land/r/g1yf6p3wr7lame69dqx6savrskkpu7qgalsxe5qd/bountyquorum:quest/1`
+- **Live Builder Profile URL**: `https://onyx.testnets.gno.land/r/g1yf6p3wr7lame69dqx6savrskkpu7qgalsxe5qd/bountyquorum:builder/g1k37wahgstwqnjkym647sav3tqxu8lgtag70kr8`
+- **Live JSON `:stats`**: `{"quests":1,"builders":1,"total_escrowed_ugnot":1000000,"total_disbursed_ugnot":1000000}`
+- **Distinct Builder Address**: `g1k37wahgstwqnjkym647sav3tqxu8lgtag70kr8` (verified distinct from Sponsor/Reviewer `g1yf6p3wr7lame69dqx6savrskkpu7qgalsxe5qd`; self-review guard enforced)
+
+| Lifecycle Step | Caller Role | `onyx-1` Tx Hash |
+| --- | --- | --- |
+| `AddMilestone(1, M1: Event Schema & Parser)` | `tavern_builder` | `OEiW/xnpFixJKp4BMBTyaxUvzdq/H+ZB5D8chi9HsNc=` |
+| `AddMilestone(1, M2: CLI Indexer & Test Suite)` | `tavern_builder` | `l5Lvxr+RpZdwtio7f18q0Ol+ZHXg+Kt3tY8WtVwURDo=` |
+| `SubmitDeliverable(1, 0)` | `tavern_demo_builder` | `o7/OVgDrymDu1U6OHS9iEXz89j5CTwnUa6aA2NzUYlg=` |
+| `ReviewMilestone(1, 0)` | `tavern_builder` | `0BPiyW6kg3AYtUVgevtjHigK6oO3U0NO+luIugb4pRs=` |
+| `SubmitDeliverable(1, 1)` | `tavern_demo_builder` | `zN9dQuPEtkLwjp04ERlbuWK5BWdrFlQ/ZXnkKDa5Iec=` |
+| `ReviewMilestone(1, 1)` | `tavern_builder` | `Vqm8Z94MzAOj+gq4CuL0IWsdmfKAu/Y2Hh2AqmUNKII=` |
